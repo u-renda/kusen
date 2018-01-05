@@ -1,0 +1,5 @@
+/* Add here all your CSS customizations */
+html #header .header-top.header-top-third {
+    background: #484a51;
+    border-top-color: #3c3e44;
+}
