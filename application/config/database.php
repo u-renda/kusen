@@ -102,9 +102,9 @@ else
 	$db['default'] = array(
 		'dsn'	=> '',
 		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => '',
-		'database' => 'griya_gemilang',
+		'username' => 'k8999506',
+		'password' => 'b5vsk47E1A',
+		'database' => 'k8999506_griya_gemilang',
 		'dbdriver' => 'mysqli',
 		'dbprefix' => '',
 		'pconnect' => FALSE,

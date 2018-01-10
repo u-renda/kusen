@@ -10,8 +10,9 @@ class Produk extends MY_Controller {
 		$this->load->model('product_type_model');
     }
 
-    function upvc()
+    function index()
 	{
+		print_r($this->uri->segment(1));die();
 		$data = array();
 		
 		$query2 = $this->product_type_model->info(array('name' => 'uPVC'));
@@ -34,15 +35,5 @@ class Produk extends MY_Controller {
 		
 		$data['view_content'] = 'web/produk/upvc';
 		$this->display_view('web/templates/frame', $data);
-	}
-	
-	function alumunium()
-	{
-		
-	}
-	
-	function kabinet()
-	{
-		
 	}
 }

@@ -525,5 +525,47 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+if(is_bool(LOCALHOST) || LOCALHOST == 'localhost')
+{
+    $config['upload_url'] = $config['base_url'].'assets/img/';
+    $config['upload_dir'] =  $_SERVER['DOCUMENT_ROOT'].'/kusen/assets/img/';
+}
+else
+{
+    $config['upload_url'] = $config['base_url'].'assets/img/';
+    $config['upload_dir'] = '/home/u6124654/public_html/assets/img/';
+}
+
 /* MAIN */
-$config['title'] = 'Griya Gemilang Mandiri';
+$config['title'] = 'PT. Griya Gemilang Mandiri';
+
+/* ADMIN */
+$config['link_admin_akun_saya'] = $config['base_url'].'admin/akun_saya';
+$config['link_admin_galeri'] = $config['base_url'].'admin/galeri';
+$config['link_admin_galeri_create'] = $config['base_url'].'admin/galeri_create';
+$config['link_admin_galeri_update'] = $config['base_url'].'admin/galeri_update';
+$config['link_admin_home'] = $config['base_url'].'admin/home'; // index (gak perlu routes)
+$config['link_admin_keunggulan'] = $config['base_url'].'admin/keunggulan';
+$config['link_admin_keunggulan_create'] = $config['base_url'].'admin/keunggulan_create';
+$config['link_admin_keunggulan_update'] = $config['base_url'].'admin/keunggulan_update';
+$config['link_admin_lists'] = $config['base_url'].'admin/admin_lists';
+$config['link_admin_create'] = $config['base_url'].'admin/admin_create';
+$config['link_admin_update'] = $config['base_url'].'admin/admin_update';
+$config['link_admin_login'] = $config['base_url'].'admin/login'; // index (gak perlu routes)
+$config['link_admin_logout'] = $config['base_url'].'admin/logout';
+$config['link_admin_lupa_password'] = $config['base_url'].'admin/lupa_password';
+$config['link_admin_pengaturan'] = $config['base_url'].'admin/pengaturan';
+$config['link_admin_pengaturan_create'] = $config['base_url'].'admin/pengaturan_create';
+$config['link_admin_pengaturan_update'] = $config['base_url'].'admin/pengaturan_update';
+$config['link_admin_produk'] = $config['base_url'].'admin/produk';
+$config['link_admin_produk_create'] = $config['base_url'].'admin/produk_create';
+$config['link_admin_produk_update'] = $config['base_url'].'admin/produk_update';
+$config['link_admin_produk_tipe'] = $config['base_url'].'admin/produk_tipe';
+$config['link_admin_produk_tipe_create'] = $config['base_url'].'admin/produk_tipe_create';
+$config['link_admin_produk_tipe_update'] = $config['base_url'].'admin/produk_tipe_update';
+$config['link_admin_slider'] = $config['base_url'].'admin/slider';
+$config['link_admin_slider_create'] = $config['base_url'].'admin/slider_create';
+$config['link_admin_slider_update'] = $config['base_url'].'admin/slider_update';
+$config['link_admin_testimonial'] = $config['base_url'].'admin/testimonial';
+$config['link_admin_testimonial_create'] = $config['base_url'].'admin/testimonial_create';
+$config['link_admin_testimonial_update'] = $config['base_url'].'admin/testimonial_update';

@@ -10,11 +10,11 @@
 
 		<meta name="keywords" content="Jasa Pembuatan Kusen uPVC" />
 		<meta name="description" content="Griya Gemilang Mandiri - Jasa Pembuatan Kusen Pintu dan Jendela uPVC">
-		<meta name="author" content="griya_gemilang.com">
+		<meta name="author" content="renda.innovation@gmail.com">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="shortcut icon" href="<?php echo base_url('assets/img').'/logo.jpg'; ?>" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="<?php echo base_url('assets/img').'/logo.jpg'; ?>">
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
