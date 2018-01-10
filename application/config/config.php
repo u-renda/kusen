@@ -533,7 +533,7 @@ if(is_bool(LOCALHOST) || LOCALHOST == 'localhost')
 else
 {
     $config['upload_url'] = $config['base_url'].'assets/img/';
-    $config['upload_dir'] = '/home/u6124654/public_html/assets/img/';
+    $config['upload_dir'] = '/home/k8999506/public_html/assets/img/';
 }
 
 /* MAIN */
