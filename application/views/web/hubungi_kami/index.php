@@ -67,7 +67,7 @@
 
 				<h4 class="heading-primary">Jam <strong>Kerja</strong></h4>
 				<ul class="list list-icons list-dark mt-xlg">
-					<li><i class="fa fa-clock-o"></i> Senin - Friday 09:00 WIB sampai 18:00 WIB</li>
+					<li><i class="fa fa-clock-o"></i> Senin - Jumat 08:00 WIB sampai 17:00 WIB</li>
 					<li><i class="fa fa-clock-o"></i> Sabtu & Minggu - Tutup</li>
 				</ul>
 			</div>

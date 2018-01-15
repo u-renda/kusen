@@ -539,6 +539,10 @@ else
 /* MAIN */
 $config['title'] = 'PT. Griya Gemilang Mandiri';
 
+/* WEB */
+$config['link_galeri'] = $config['base_url'].'galeri';
+$config['link_produk'] = $config['base_url'].'produk';
+
 /* ADMIN */
 $config['link_admin_akun_saya'] = $config['base_url'].'admin/akun_saya';
 $config['link_admin_galeri'] = $config['base_url'].'admin/galeri';
@@ -562,6 +566,9 @@ $config['link_admin_produk_create'] = $config['base_url'].'admin/produk_create';
 $config['link_admin_produk_update'] = $config['base_url'].'admin/produk_update';
 $config['link_admin_produk_tipe'] = $config['base_url'].'admin/produk_tipe';
 $config['link_admin_produk_tipe_create'] = $config['base_url'].'admin/produk_tipe_create';
+$config['link_admin_produk_tipe_detail'] = $config['base_url'].'admin/produk_tipe_detail';
+$config['link_admin_produk_tipe_detail_create'] = $config['base_url'].'admin/produk_tipe_detail_create';
+$config['link_admin_produk_tipe_detail_update'] = $config['base_url'].'admin/produk_tipe_detail_update';
 $config['link_admin_produk_tipe_update'] = $config['base_url'].'admin/produk_tipe_update';
 $config['link_admin_slider'] = $config['base_url'].'admin/slider';
 $config['link_admin_slider_create'] = $config['base_url'].'admin/slider_create';

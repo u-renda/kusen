@@ -9,8 +9,5 @@
 <!--START GALERI-->
 <?php $this->load->view('web/beranda/galeri'); ?>
 <!--END GALERI-->
-<!--START TESTIMOIAL-->
-<?php $this->load->view('web/beranda/testimonial'); ?>
-<!--END TESTIMOIAL-->
 
 </div>

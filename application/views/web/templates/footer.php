@@ -8,6 +8,7 @@
 									<li><p><i class="fa fa-map-marker"></i> <strong>Alamat:</strong> <?php echo $alamat; ?></p></li>
 									<li><p><i class="fa fa-phone"></i> <strong>Telp:</strong> <?php echo $telp; ?></p></li>
 									<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p></li>
+									<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:<?php echo $email2; ?>"><?php echo $email2; ?></a></p></li>
 								</ul>
 							</div>
 						</div>
@@ -15,7 +16,7 @@
 							<h4>Ikuti Kami</h4>
 							<ul class="social-icons">
 								<li class="social-icons-facebook"><a href="<?php echo $facebook; ?>" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-								<li class="social-icons-twitter"><a href="<?php echo $twitter; ?>" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+								<li class="social-icons-youtube"><a href="<?php echo $youtube; ?>" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a></li>
 								<li class="social-icons-instagram"><a href="<?php echo $instagram; ?>" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
 							</ul>
 						</div>

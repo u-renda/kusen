@@ -55,7 +55,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 /* MAIN */
 $route['index'] = 'beranda/index';
-$route['product/:any'] = 'produk/index';
+$route['produk/(:any)'] = 'produk/index/$1';
+$route['produk/(:any)/(:any)'] = 'produk/index/$1';
 
 /* ADMIN */
 $route['admin'] = 'admin/login/index';
@@ -90,6 +91,11 @@ $route['admin/produk_update'] = 'admin/produk/produk_update';
 $route['admin/produk_tipe'] = 'admin/produk/produk_tipe_lists';
 $route['admin/produk_tipe_create'] = 'admin/produk/produk_tipe_create';
 $route['admin/produk_tipe_delete'] = 'admin/produk/produk_tipe_delete';
+$route['admin/produk_tipe_detail'] = 'admin/produk/produk_tipe_detail_lists';
+$route['admin/produk_tipe_detail_create'] = 'admin/produk/produk_tipe_detail_create';
+$route['admin/produk_tipe_detail_delete'] = 'admin/produk/produk_tipe_detail_delete';
+$route['admin/produk_tipe_detail_get'] = 'admin/produk/produk_tipe_detail_get';
+$route['admin/produk_tipe_detail_update'] = 'admin/produk/produk_tipe_detail_update';
 $route['admin/produk_tipe_get'] = 'admin/produk/produk_tipe_get';
 $route['admin/produk_tipe_update'] = 'admin/produk/produk_tipe_update';
 $route['admin/slider'] = 'admin/slider/slider_lists';

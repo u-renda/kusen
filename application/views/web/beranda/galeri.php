@@ -1,4 +1,4 @@
-<section class="section section-primary mt-none">
+<section class="section mt-none">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">

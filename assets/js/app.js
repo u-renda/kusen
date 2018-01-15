@@ -315,17 +315,17 @@ $(function () {
             {
                 field: "Tipe",
                 sortable: false,
-                width: 70
+                width: 100
             },
             {
-                field: "Harga",
+                field: "Keterangan",
                 sortable: false,
-                width: 100
+                width: 300
             },
             {
                 field: "Foto",
                 sortable: false,
-                width: 200,
+                width: 100,
                 template: "#= data.Foto #"
             },
             {
@@ -344,6 +344,65 @@ $(function () {
                 transport: {
                     read: {
                         url: "produk_tipe_get",
+                        dataType: "json",
+                        type: "POST",
+                        data: {}
+                    }
+                },
+                schema: {
+                    data: "results",
+                    total: "total"
+                },
+                pageSize: 20,
+                serverPaging: true,
+                serverSorting: true,
+                serverFiltering: true,
+                cache: false
+            },
+            sortable: {
+                mode: "single",
+                allowUnsort: true
+            },
+            pageable: {
+                buttonCount: 5,
+                input: true,
+                pageSizes: true,
+                refresh: true
+            },
+            selectable: "row",
+            resizable: true,
+            columns: [{
+                field: "No",
+                sortable: false,
+                width: 30
+            },
+            {
+                field: "Nama",
+                sortable: false,
+                width: 70,
+                template: "#= data.Nama #"
+            },
+            {
+                field: "Urutan",
+                sortable: false,
+                width: 50
+            },
+            {
+                field: "Aksi",
+                sortable: false,
+                width: 50,
+                template: "#= data.Aksi #"
+            }]
+        });
+    }
+    
+    // Produk Tipe Detail Lists
+    if (document.getElementById('produk_tipe_detail_lists_page') != null) {
+        $("#multipleTable").kendoGrid({
+            dataSource: {
+                transport: {
+                    read: {
+                        url: "produk_tipe_detail_get",
                         dataType: "json",
                         type: "POST",
                         data: {}
@@ -553,5 +612,26 @@ $(function () {
                 $('.image_option').hide();
             }
         });
+    }
+	
+    // Produk Create
+    if (document.getElementById('produk_create_page') != null) {
+		$("#id_product_type").change(function() {
+			var id_product_type = $(this).find("option:selected").attr("id");
+			var dataString = 'id_product_type='+ id_product_type
+			$.ajax({
+				url: 'home/check_product_type_lists',
+				type: "POST",
+				data: dataString,
+				beforeSend : function (){
+					$('#id_product_type_detail').html('<i class="fa fa-spinner fa-spin"></i>');
+				},
+				success: function(data) {
+					$('#id_product_type_detail').html(data);
+				},
+				error: function(data){
+				}
+			});
+		});
     }
 });

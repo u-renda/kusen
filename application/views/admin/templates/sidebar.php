@@ -55,7 +55,7 @@
                                      Daftar Produk
                                 </a>
                             </li>
-                            <li class="list-child">
+                            <li class="list-child" id="tipe_produk">
                                 <a href="<?php echo $this->config->item('link_admin_produk_tipe'); ?>">
                                      Tipe Produk
                                 </a>

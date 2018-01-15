@@ -61,7 +61,7 @@
 					<div class="header-top header-top-third header-top-style-3">
 						<div class="container">
 							<p class="text-color-light">
-								<span class="ml-xs">Hubungi Kami! <i class="fa fa-phone"></i> <?php echo $telp; ?></span><span class="hidden-xs"> | <a href="#"><?php echo $email; ?></a></span>
+								<span class="ml-xs">Hubungi Kami! <i class="fa fa-phone"></i> <?php echo $telp; ?></span><span class="hidden-xs"> | <a href="#"><?php echo $email; ?></a></span><span class="hidden-xs"> | <a href="#"><?php echo $email2; ?></a></span>
 							</p>
 							<div class="header-search hidden-xs">
 								<form id="searchForm" action="page-search-results.html" method="get">

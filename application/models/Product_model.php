@@ -36,12 +36,13 @@ class Product_model extends CI_Model {
             $where += array('slug' => $param['slug']);
         }
         
-        $this->db->select($this->table_id.', '.$this->table.'.id_product_type, '.$this->table.'.name,
-						  slug, price, url, '.$this->table.'.created_date,
-						  '.$this->table.'.updated_date, product_type.name as product_type_name');
+        $this->db->select($this->table_id.', '.$this->table.'.id_product_type_detail,
+						  '.$this->table.'.name, slug, description, url, '.$this->table.'.created_date,
+						  '.$this->table.'.updated_date,
+						  product_type_detail.name as product_type_detail_name');
         $this->db->from($this->table);
         $this->db->where($where);
-        $this->db->join('product_type', $this->table.'.id_product_type = product_type.id_product_type', 'left');
+        $this->db->join('product_type_detail', $this->table.'.id_product_type_detail = product_type_detail.id_product_type_detail', 'left');
         $query = $this->db->get();
         return $query;
     }
@@ -49,20 +50,32 @@ class Product_model extends CI_Model {
     function lists($param)
     {
         $where = array();
-        if (isset($param['id_product_type']) == TRUE)
+        if (isset($param['id_product_type_detail']) == TRUE)
         {
-            $where += array($this->table.'.id_product_type' => $param['id_product_type']);
+            $where += array($this->table.'.id_product_type_detail' => $param['id_product_type_detail']);
         }
         
-        $this->db->select($this->table_id.', '.$this->table.'.id_product_type, '.$this->table.'.name,
-						  slug, price, url, '.$this->table.'.created_date,
-						  '.$this->table.'.updated_date, product_type.name as product_type_name');
+        $this->db->select($this->table_id.', '.$this->table.'.id_product_type_detail,
+						  '.$this->table.'.name, slug, description, url, '.$this->table.'.created_date,
+						  '.$this->table.'.updated_date,
+						  product_type_detail.name as product_type_detail_name');
         $this->db->from($this->table);
         $this->db->where($where);
-        $this->db->join('product_type', $this->table.'.id_product_type = product_type.id_product_type', 'left');
+        $this->db->join('product_type_detail', $this->table.'.id_product_type_detail = product_type_detail.id_product_type_detail', 'left');
         $this->db->order_by($param['order'], $param['sort']);
         $this->db->limit($param['limit'], $param['offset']);
         $query = $this->db->get();
+        return $query;
+    }
+    
+    function lists_count($param)
+    {
+        $where = array();
+        
+        $this->db->select($this->table_id);
+        $this->db->from($this->table);
+        $this->db->where($where);
+        $query = $this->db->count_all_results();
         return $query;
     }
     

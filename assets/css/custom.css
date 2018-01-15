@@ -3,3 +3,14 @@ html #header .header-top.header-top-third {
     background: #484a51;
     border-top-color: #3c3e44;
 }
+
+.header-title {
+	font-size: 33px;
+	margin-bottom: 30px;
+	display: block;
+	color: rgb(62,64,149);
+}
+
+.v-align-bottom {
+	vertical-align: bottom !important;
+}

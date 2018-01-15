@@ -1,14 +1,13 @@
 var winOrigin = window.location.origin;
 var winPath = window.location.pathname.split('/');
 var newPathname = winOrigin + "/" + winPath[1] + "/";
-var adminPathname = winOrigin + "/" + winPath[1] + "/" + winPath[2] + "/";
 
 (function($) {
 
 	'use strict';
 	
 	/*
-	Sidebar
+	Admin Sidebar
 	*/
     var list_main = $('li.list-main');
     var list_child = $('li.list-child');
@@ -19,6 +18,12 @@ var adminPathname = winOrigin + "/" + winPath[1] + "/" + winPath[2] + "/";
     if (winPath[3] === 'admin_create' || winPath[3] === 'admin_update') {
         $('#admin').addClass('nav-active');
         $('#lainnya').addClass('nav-active nav-expanded');
+    }
+    
+	// khusus produk tipe detail
+    if (winPath[3] === 'produk_tipe_detail' || winPath[3] === 'produk_tipe_detail_create') {
+        $('#tipe_produk').addClass('nav-active');
+        $('#produk').addClass('nav-active nav-expanded');
     }
     
 	list_main.each(function() {

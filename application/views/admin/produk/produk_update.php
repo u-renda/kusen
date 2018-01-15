@@ -30,11 +30,20 @@
                                 <select class="form-control" name="id_product_type">
                                     <option value="">-- Pilih Salah Satu --</option>
                                     <?php foreach ($product_type_lists as $key => $val) { ?>
-										<option value="<?php echo $val->id_product_type; ?>" <?php if ($result->id_product_type == $val->id_product_type) { echo 'selected="selected"'; } echo set_select('id_product_type', $val->id_product_type); ?>><?php echo $val->name; ?></option>
+										<option value="<?php echo $val->id_product_type; ?>" <?php if ($product_type_detail->id_product_type == $val->id_product_type) { echo 'selected="selected"'; } echo set_select('id_product_type', $val->id_product_type); ?>><?php echo $val->name; ?></option>
                                     <?php } ?>
                                 </select>
                                 <?php echo form_error('id_product_type'); ?>
                             </div>
+							<div class="col-sm-10 col-sm-offset-2 mt-sm">
+								<select class="form-control" name="id_product_type_detail" id="id_product_type_detail">
+									<option value="">-- Pilih Produk Detail --</option>
+									<?php foreach ($product_type_detail_lists as $key => $val) { ?>
+										<option value="<?php echo $val->id_product_type_detail; ?>" <?php if ($result->id_product_type_detail == $val->id_product_type_detail) { echo 'selected="selected"'; } echo set_select('id_product_type_detail', $val->id_product_type_detail); ?>><?php echo ucwords($val->name); ?></option>
+									<?php } ?>
+								</select>
+								<?php echo form_error('id_product_type_detail'); ?>
+							</div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label"><span class="text-danger">*</span> Nama:</label>
@@ -44,11 +53,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label"><span class="text-danger">*</span> Harga:</label>
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span> Keterangan:</label>
                             <div class="col-sm-10">
-                                <input type="text" name="price" class="form-control" value="<?php echo set_value('price', $result->price); ?>">
-                                <span class="help-block">Masukkan tanpa titik (.) atau koma (,)</span>
-								<?php echo form_error('price'); ?>
+                                <textarea rows="5" name="description" class="form-control mceEditor"><?php echo set_value('description', $result->description); ?></textarea>
+                                <?php echo form_error('description'); ?>
                             </div>
                         </div>
                         <div class="form-group">
