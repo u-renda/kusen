@@ -41,6 +41,7 @@
                                         <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Hapus</a>
                                     </div>
                                 </div>
+								<span class="help-block">* Ukuran file max 2MB</span>
                                 <?php echo form_error('slider_url'); ?>
                             </div>
                         </div>

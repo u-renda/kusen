@@ -30,7 +30,7 @@
 				<li class="col-md-3 col-sm-6 col-xs-12 isotope-item websites">
 					<div class="image-gallery-item">
 						<a href="<?php echo $row->url; ?>" class="lightbox-portfolio">
-							<span class="thumb-info">
+							<span class="thumb-info" style="height: 261.5px;">
 								<span class="thumb-info-wrapper">
 									<img src="<?php echo $row->url; ?>" class="img-responsive" alt="">
 									<span class="thumb-info-action">

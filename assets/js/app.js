@@ -13,9 +13,9 @@
             "advlist autolink lists link image charmap print preview anchor",
             "searchreplace visualblocks",
             "insertdatetime table contextmenu paste",
-            "emoticons media"
+            "emoticons media code"
         ],
-        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | emoticons | media",
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | emoticons | media | code",
         media_live_embeds: true
     });
 

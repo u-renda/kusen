@@ -50,7 +50,7 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label"><span class="text-danger">*</span> Keterangan:</label>
                             <div class="col-sm-10">
-                                <textarea rows="5" name="description" class="form-control mceEditor"><?php echo set_value('description'); ?></textarea>
+                                <textarea rows="5" name="description" class="form-control"><?php echo set_value('description'); ?></textarea>
                                 <?php echo form_error('description'); ?>
                             </div>
                         </div>
@@ -71,6 +71,7 @@
                                         <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Hapus</a>
                                     </div>
                                 </div>
+								<span class="help-block">* Ukuran file max 2MB</span>
                                 <?php echo form_error('produk_url'); ?>
                             </div>
                         </div>

@@ -1,6 +1,7 @@
 var winOrigin = window.location.origin;
 var winPath = window.location.pathname.split('/');
 var newPathname = winOrigin + "/" + winPath[1] + "/";
+var adminPathname = winOrigin + "/" + winPath[1] + "/" + winPath[2] + "/";
 
 (function($) {
 

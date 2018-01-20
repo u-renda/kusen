@@ -33,10 +33,8 @@
 					<span class="product-thumb-info">
 						<img alt="<?php echo $row->name; ?>" class="img-responsive" src="<?php echo $row->url; ?>">
 						<span class="product-thumb-info-content">
-							<h4><?php echo $row->name; ?></h4>
-							<span class="price">
-								<ins><span class="amount"><?php echo $row->description; ?></span></ins>
-							</span>
+							<h4 class="mb-md"><?php echo $row->name; ?></h4>
+							<span><?php echo $row->description; ?></span>
 						</span>
 					</span>
 				</li>

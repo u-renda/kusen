@@ -3,7 +3,7 @@
 		<div class="header-column">
 			<div class="header-logo">
 				<a href="<?php echo base_url(); ?>">
-					<img alt="Griya Gemilang Mandiri" width="165" height="165" data-sticky-width="82" data-sticky-height="82" data-sticky-top="0" src="<?php echo base_url('assets/img').'/logo.jpg'; ?>">
+					<img alt="Griya Gemilang Mandiri" width="auto" height="40" src="<?php echo base_url('assets/img').'/logo.jpg'; ?>">
 				</a>
 			</div>
 		</div>
@@ -26,7 +26,6 @@
 					<div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
 						<nav>
 							<ul class="nav nav-pills" id="mainNav">
-								<!--<li class="active">-->
 								<li class="list-main">
 									<a href="<?php echo base_url(); ?>">
 										Beranda

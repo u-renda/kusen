@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col-md-8">
 				<!--TENTANG KAMI-->
-				<h3 class="heading-primary"><strong><?php echo 'PT. '.$this->config->item('title'); ?></strong></h3>
+				<h3 class="heading-primary"><strong><?php echo $this->config->item('title'); ?></strong></h3>
 				<?php echo $tentang_kami; ?>
 				<hr class="tall">
 				
