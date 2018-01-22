@@ -9,7 +9,7 @@
 		</div>
 		<div class="header-column v-align-bottom">
 			<div class="header-title">
-				<?php echo 'Griya Gemilang Mandiri'; ?>
+				<strong><?php echo 'Griya Gemilang Mandiri'; ?></strong>
 			</div>
 		</div>
 		<div class="header-column">
