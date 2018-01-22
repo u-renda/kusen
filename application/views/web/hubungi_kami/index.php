@@ -49,7 +49,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<input type="submit" value="Kirim Pesan" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading...">
+							<input name="submit" type="submit" value="Kirim Pesan" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading...">
 						</div>
 					</div>
 				</form>
@@ -61,6 +61,7 @@
 					<li><i class="fa fa-map-marker"></i> <strong>Alamat:</strong> <?php echo $alamat;?></li>
 					<li><i class="fa fa-phone"></i> <strong>Telp:</strong> <?php echo $telp; ?></li>
 					<li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></li>
+					<li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:<?php echo $email2; ?>"><?php echo $email2; ?></a></li>
 				</ul>
 
 				<hr class="tall">
