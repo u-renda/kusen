@@ -52,7 +52,8 @@ var newPathname = winOrigin + "/" + winPath[1] + "/";
 					name: $form.find('#name').val(),
 					email: $form.find('#email').val(),
 					subject: $form.find('#subject').val(),
-					message: $form.find('#message').val()
+					message: $form.find('#message').val(),
+					submit: $form.find('#submit').val()
 				},
 				dataType: 'json',
 				complete: function(data) {

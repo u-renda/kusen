@@ -57,7 +57,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-							<input name="submit" type="submit" value="Kirim Pesan" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading...">
+							<input name="submit" id="submit" type="submit" value="Kirim Pesan" class="btn btn-primary btn-lg mb-xlg" data-loading-text="Loading...">
 						</div>
 					</div>
 				</form>

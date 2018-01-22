@@ -18,14 +18,25 @@ class Hubungi_kami extends MY_Controller {
 			$this->load->library('email');
 
 			$this->email->from($this->input->post('email'), $this->input->post('name'));
-			$this->email->to('testing@griyagemilang.com');
-			//$this->email->to('rosy@griyagemilang.com');
-			//$this->email->cc('edi@griyagemilang.com');
+			$this->email->to('rosy@griyagemilang.com');
+			$this->email->cc('edi@griyagemilang.com');
 			
 			$this->email->subject($this->input->post('subject'));
 			$this->email->message($this->input->post('message'));
 			
 			$send = $this->email->send();
+			
+			if ($send == TRUE)
+			{
+				$response = array('response' => 'success');
+			}
+			else
+			{
+				$response = array('response' => 'failed');
+			}
+			
+			echo json_encode($response);
+			exit();
 		}
 		
 		$data['view_content'] = 'web/hubungi_kami/index';
