@@ -541,6 +541,7 @@ $config['title'] = 'PT. Griya Gemilang Mandiri';
 
 /* WEB */
 $config['link_galeri'] = $config['base_url'].'galeri';
+$config['link_pesan_berhasil'] = $config['base_url'].'hubungi_kami/pesan_berhasil';
 $config['link_produk'] = $config['base_url'].'produk';
 
 /* ADMIN */

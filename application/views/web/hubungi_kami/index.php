@@ -31,11 +31,19 @@
 						<div class="form-group">
 							<div class="col-md-6">
 								<label>Nama Anda *</label>
-								<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name" required>
+								<input type="text" value="" data-msg-required="Mohon isi nama Anda." maxlength="100" class="form-control" name="name" id="name" required>
 							</div>
 							<div class="col-md-6">
 								<label>Email Anda *</label>
-								<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email" required>
+								<input type="email" value="" data-msg-required="Mohon isi email Anda." data-msg-email="Mohon isi email dengan format yang benar." maxlength="100" class="form-control" name="email" id="email" required>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							<div class="col-md-12">
+								<label>Judul</label>
+								<input type="text" value="" data-msg-required="Mohon isi judul." maxlength="100" class="form-control" name="subject" id="subject" required>
 							</div>
 						</div>
 					</div>
@@ -43,7 +51,7 @@
 						<div class="form-group">
 							<div class="col-md-12">
 								<label>Pesan *</label>
-								<textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message" required></textarea>
+								<textarea maxlength="5000" data-msg-required="Mohon isi pesan Anda." rows="10" class="form-control" name="message" id="message" required></textarea>
 							</div>
 						</div>
 					</div>

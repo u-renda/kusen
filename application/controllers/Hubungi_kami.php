@@ -22,22 +22,20 @@ class Hubungi_kami extends MY_Controller {
 			//$this->email->to('rosy@griyagemilang.com');
 			//$this->email->cc('edi@griyagemilang.com');
 			
-			$this->email->subject('Pertanyaan dari Website');
+			$this->email->subject($this->input->post('subject'));
 			$this->email->message($this->input->post('message'));
 			
 			$send = $this->email->send();
-			
-			if ($send == TRUE)
-			{
-				echo "berhasil";die();
-			}
-			else
-			{
-				echo "gagal";die();
-			}
 		}
 		
 		$data['view_content'] = 'web/hubungi_kami/index';
+		$this->display_view('web/templates/frame', $data);
+	}
+	
+	function pesan_berhasil()
+	{
+		$data = array();
+		$data['view_content'] = 'web/hubungi_kami/pesan_berhasil';
 		$this->display_view('web/templates/frame', $data);
 	}
 }
