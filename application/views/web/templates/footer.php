@@ -48,6 +48,7 @@
 		<script src="<?php echo base_url('assets/vendor/bootstrap/js').'/bootstrap.js'; ?>"></script>
 		<script src="<?php echo base_url('assets/vendor/common').'/common.js'; ?>"></script>
 		<script src="<?php echo base_url('assets/vendor/jquery.validation').'/jquery.validation.js'; ?>"></script>
+		<script src="<?php echo base_url('assets/vendor/isotope').'/jquery.isotope.js'; ?>"></script>
 		
 		<!-- Theme Base, Components and Settings -->
 		<script src="<?php echo base_url('assets/js').'/theme.js'; ?>"></script>

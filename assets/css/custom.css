@@ -14,3 +14,7 @@ html #header .header-top.header-top-third {
 .v-align-bottom {
 	vertical-align: bottom !important;
 }
+
+.masonry .masonry-item {
+    width: 33.33%;
+}

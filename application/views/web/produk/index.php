@@ -24,14 +24,13 @@
 				<p><?php echo 'Showing '.$offset.' – '.$count.' of '.$total.' results.'; ?></p>
 			</div>
 		</div>
-	
+		
 		<div class="row">
-	
 			<ul class="products product-thumb-info-list" data-plugin-masonry>
 				<?php foreach ($result as $row) { ?>
 				<li class="col-md-4 col-sm-6 col-xs-12 product">
 					<span class="product-thumb-info">
-						<img alt="<?php echo $row->name; ?>" class="img-responsive" src="<?php echo $row->url; ?>">
+						<img alt="<?php echo $row->name; ?>" class="img-responsive" src="<?php echo $row->url; ?>" style="max-height: 358px;">
 						<span class="product-thumb-info-content">
 							<h4 class="mb-md"><?php echo $row->name; ?></h4>
 							<span><?php echo $row->description; ?></span>
@@ -40,7 +39,6 @@
 				</li>
 				<?php } ?>
 			</ul>
-	
 		</div>
 	
 		<?php echo $this->pagination->create_links(); ?>
