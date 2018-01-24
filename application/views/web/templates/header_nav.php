@@ -3,7 +3,7 @@
 		<div class="header-column">
 			<div class="header-logo">
 				<a href="<?php echo base_url(); ?>">
-					<img alt="Griya Gemilang Mandiri" width="auto" height="40" src="<?php echo base_url('assets/img').'/logo.jpg'; ?>">
+					<img alt="<?php echo $this->config->item('title'); ?>" width="auto" height="40" src="<?php echo base_url('assets/img').'/logo.jpg'; ?>">
 				</a>
 			</div>
 		</div>
@@ -19,9 +19,13 @@
 						<i class="fa fa-bars"></i>
 					</button>
 					<ul class="header-social-icons social-icons hidden-xs">
+						<?php if ($facebook == TRUE) { ?>
 						<li class="social-icons-facebook"><a href="<?php echo $facebook; ?>" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<?php } if ($youtube == TRUE) { ?>
 						<li class="social-icons-youtube"><a href="<?php echo $youtube; ?>" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+						<?php } if ($instagram == TRUE) { ?>
 						<li class="social-icons-instagram"><a href="<?php echo $instagram; ?>" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+						<?php } ?>
 					</ul>
 					<div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
 						<nav>

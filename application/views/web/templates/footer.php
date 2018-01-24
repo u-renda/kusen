@@ -1,7 +1,7 @@
-			<footer id="footer">
+			<footer id="footer" class="color color-primary">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-4 col-md-offset-6">
+						<div class="col-md-4">
 							<div class="contact-details">
 								<h4>Hubungi Kami</h4>
 								<ul class="contact">
@@ -13,12 +13,18 @@
 							</div>
 						</div>
 						<div class="col-md-2">
+							<?php if ($facebook == TRUE || $youtube == TRUE || $instagram == TRUE) { ?>
 							<h4>Ikuti Kami</h4>
 							<ul class="social-icons">
+								<?php if ($facebook == TRUE) { ?>
 								<li class="social-icons-facebook"><a href="<?php echo $facebook; ?>" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								<?php } if ($youtube == TRUE) { ?>
 								<li class="social-icons-youtube"><a href="<?php echo $youtube; ?>" target="_blank" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+								<?php } if ($instagram == TRUE) { ?>
 								<li class="social-icons-instagram"><a href="<?php echo $instagram; ?>" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+								<?php } ?>
 							</ul>
+							<?php } ?>
 						</div>
 					</div>
 				</div>

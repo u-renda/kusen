@@ -15,6 +15,10 @@ class MY_Controller extends CI_Controller
         $this->load->model('product_type_detail_model');
         $this->load->model('product_type_model');
         
+		$facebook = '';
+		$instagram = '';
+		$youtube = '';
+		
         $query = $this->preferences_model->info(array('slug' => 'telp'));
         
         if ($query->num_rows() > 0)
@@ -33,21 +37,21 @@ class MY_Controller extends CI_Controller
         
         if ($query3->num_rows() > 0)
         {
-            $this->global_data['facebook'] = $query3->row()->content;
+            $facebook = $query3->row()->content;
         }
 		
         $query4 = $this->preferences_model->info(array('slug' => 'youtube'));
         
         if ($query4->num_rows() > 0)
         {
-            $this->global_data['youtube'] = $query4->row()->content;
+            $youtube = $query4->row()->content;
         }
 		
         $query5 = $this->preferences_model->info(array('slug' => 'instagram'));
         
         if ($query5->num_rows() > 0)
         {
-            $this->global_data['instagram'] = $query5->row()->content;
+            $instagram = $query5->row()->content;
         }
 		
         $query6 = $this->preferences_model->info(array('slug' => 'alamat'));
@@ -63,6 +67,10 @@ class MY_Controller extends CI_Controller
         {
             $this->global_data['email2'] = $query7->row()->content;
         }
+		
+		$this->global_data['facebook'] = $facebook;
+		$this->global_data['instagram'] = $instagram;
+		$this->global_data['youtube'] = $youtube;
 		
 		// PRODUCT TYPE
 		$param = array();
