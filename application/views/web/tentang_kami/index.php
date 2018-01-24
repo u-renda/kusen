@@ -46,6 +46,13 @@
 				<h3><strong>Visi</strong> & Misi</h3>
 				<?php echo $visi; ?>
 			</div>
+			
+			<div class="col-md-4">
+				<h3><strong>ISO</strong> & Certificate</h3>
+				<img src="<?php echo base_url('assets/img').'/ISO_1.jpg'; ?>" class="img-responsive" alt="ISO_1">
+				<hr class="tall">
+				<img src="<?php echo base_url('assets/img').'/ISO_2.jpg'; ?>" class="img-responsive" alt="ISO_2">
+			</div>
 		</div>
 	</div>
 </div>
