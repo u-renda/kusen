@@ -71,6 +71,10 @@ class Product_model extends CI_Model {
     function lists_count($param)
     {
         $where = array();
+        if (isset($param['id_product_type_detail']) == TRUE)
+        {
+            $where += array('id_product_type_detail' => $param['id_product_type_detail']);
+        }
         
         $this->db->select($this->table_id);
         $this->db->from($this->table);

@@ -38,7 +38,7 @@ class Produk extends MY_Controller {
 					$data['offset'] = $offset + 1;
 		
 					// Total
-					$query3 = $this->product_model->lists_count(array());
+					$query3 = $this->product_model->lists_count(array('id_product_type_detail' => $query2->row()->id_product_type_detail));
 					$data['total'] = $query3;
 					
 					// Pagination
