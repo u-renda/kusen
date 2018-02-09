@@ -18,3 +18,8 @@ html #header .header-top.header-top-third {
 .masonry .masonry-item {
     width: 33.33%;
 }
+
+.product-image {
+	max-height: 358px;
+	width: 100%;
+}

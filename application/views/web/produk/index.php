@@ -30,7 +30,7 @@
 				<?php foreach ($result as $row) { ?>
 				<li class="col-md-4 col-sm-6 col-xs-12 product">
 					<span class="product-thumb-info">
-						<img alt="<?php echo $row->name; ?>" class="img-responsive" src="<?php echo $row->url; ?>" style="max-height: 358px;">
+						<img alt="<?php echo $row->name; ?>" class="img-responsive product-image" src="<?php echo $row->url; ?>">
 						<span class="product-thumb-info-content">
 							<h4 class="mb-md"><?php echo $row->name; ?></h4>
 							<span><?php echo $row->description; ?></span>
