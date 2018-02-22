@@ -557,7 +557,6 @@ $config['link_admin_create'] = $config['base_url'].'admin/admin_create';
 $config['link_admin_update'] = $config['base_url'].'admin/admin_update';
 $config['link_admin_login'] = $config['base_url'].'admin/login'; // index (gak perlu routes)
 $config['link_admin_logout'] = $config['base_url'].'admin/logout';
-$config['link_admin_lupa_password'] = $config['base_url'].'admin/lupa_password';
 $config['link_admin_pengaturan'] = $config['base_url'].'admin/pengaturan';
 $config['link_admin_pengaturan_create'] = $config['base_url'].'admin/pengaturan_create';
 $config['link_admin_pengaturan_update'] = $config['base_url'].'admin/pengaturan_update';

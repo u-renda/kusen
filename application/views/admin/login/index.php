@@ -65,7 +65,6 @@
 							<div class="form-group mb-lg">
 								<div class="clearfix">
 									<label class="pull-left">Password</label>
-									<a href="<?php echo $this->config->item('link_admin_lupa_password'); ?>" class="pull-right">Lupa Password?</a>
 								</div>
 								<div class="input-group input-group-icon">
 									<input name="password" type="password" class="form-control input-lg" />

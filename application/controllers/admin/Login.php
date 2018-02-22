@@ -82,9 +82,4 @@ class Login extends MY_Controller {
 		
         redirect($this->config->item('link_admin_login'));
     }
-	
-	function lupa_password()
-	{
-		
-	}
 }
