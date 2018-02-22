@@ -45,8 +45,8 @@ class Lainnya extends MY_Controller {
 				if ($query > 0)
 				{
 					// send email
-					//$param['ori_password'] = $ori_password;
-					//$send = $this->send_email_admin_create($param);
+					$param['ori_password'] = $ori_password;
+					$send = $this->send_email_admin_create($param);
 					
 					redirect($this->config->item('link_admin_lists').'?msg=success&type=create');
 				}
@@ -351,7 +351,8 @@ class Lainnya extends MY_Controller {
 						
 						if ($this->input->post('password') == TRUE)
 						{
-							$param['password'] = md5($this->input->post('password'));
+							$ori_password = $this->input->post('password');
+							$param['password'] = md5($ori_password);
 						}
 						
 						$param['updated_date'] = date('Y-m-d H:i:s');
@@ -359,6 +360,13 @@ class Lainnya extends MY_Controller {
 	
 						if ($query > 0)
 						{
+							if ($this->input->post('password') == TRUE)
+							{
+								// send email
+								$param['ori_password'] = $ori_password;
+								$send = $this->send_email_admin_create($param);
+							}
+							
 							redirect($this->config->item('link_admin_lists').'?msg=success&type=edit');
 						}
 						else
@@ -685,8 +693,8 @@ class Lainnya extends MY_Controller {
 		
 		$this->email->from('admin@griyagemilang.com', 'Griya Gemilang');
 		$this->email->to($param['email']);
-		$this->email->subject('Akses Halaman Admin Griya Gemilang');
-		$this->email->message('');
+		$this->email->subject('Akses Griya Gemilang');
+		$this->email->message($message);
 		$send = $this->email->send();
 		
 		if ( ! $send)
