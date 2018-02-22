@@ -84,6 +84,11 @@
                                      Daftar Admin
                                 </a>
                             </li>
+                            <li class="list-child" id="admin_role">
+                                <a href="<?php echo $this->config->item('link_admin_role_lists'); ?>">
+                                     Tipe Admin
+                                </a>
+                            </li>
 							<?php } ?>
                         </ul>
                     </li>

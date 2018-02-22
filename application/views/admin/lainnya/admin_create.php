@@ -52,6 +52,18 @@
                                 <?php echo form_error('password'); ?>
                             </div>
                         </div>
+						<div class="form-group">
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span> Tipe Admin:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="id_admin_role" id="id_admin_role">
+                                    <option value="">-- Pilih Salah Satu --</option>
+                                    <?php foreach ($admin_role as $row) {
+										echo '<option id="'.$row->id_admin_role.'" value="'.$row->id_admin_role.'"'.set_select('id_admin_role', $val->id_product_type).'>'.$row->name.'</option>';
+                                    } ?>
+                                </select>
+                                <?php echo form_error('id_admin_role'); ?>
+                            </div>
+                        </div>
                     </div>
                     <footer class="panel-footer">
                         <input type="submit" class="btn btn-primary" name="submit" value="Tambah" id="submit_create" />
