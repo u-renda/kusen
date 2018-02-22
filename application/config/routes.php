@@ -77,7 +77,6 @@ $route['admin/keunggulan_delete'] = 'admin/keunggulan/keunggulan_delete';
 $route['admin/keunggulan_get'] = 'admin/keunggulan/keunggulan_get';
 $route['admin/keunggulan_update'] = 'admin/keunggulan/keunggulan_update';
 $route['admin/logout'] = 'admin/login/logout';
-$route['admin/lupa_password'] = 'admin/login/lupa_password';
 $route['admin/pengaturan'] = 'admin/lainnya/pengaturan_lists';
 $route['admin/pengaturan_create'] = 'admin/lainnya/pengaturan_create';
 $route['admin/pengaturan_delete'] = 'admin/lainnya/pengaturan_delete';

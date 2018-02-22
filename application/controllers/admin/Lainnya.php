@@ -29,17 +29,22 @@ class Lainnya extends MY_Controller {
 			
 			if ($this->form_validation->run() == TRUE)
 			{
+				$ori_password = $this->input->post('password');
 				$param = array();
 				$param['name'] = $this->input->post('name');
 				$param['email'] = $this->input->post('email');
 				$param['username'] = $this->input->post('username');
-				$param['password'] = md5($this->input->post('password'));
+				$param['password'] = md5($ori_password);
 				$param['created_date'] = date('Y-m-d H:i:s');
 				$param['updated_date'] = date('Y-m-d H:i:s');
 				$query = $this->admin_model->create($param);
 				
 				if ($query > 0)
 				{
+					// send email
+					$param['ori_password'] = $ori_password;
+					$send = $this->send_email_admin_create($param);
+					
 					redirect($this->config->item('link_admin_lists').'?msg=success&type=create');
 				}
 				else
@@ -463,4 +468,43 @@ class Lainnya extends MY_Controller {
 		
         $this->display_view('admin/templates/frame', $data);
     }
+	
+	function send_email_admin_create($param)
+	{
+		$this->load->library('email');
+		
+		$config = array();
+		$config['useragent'] = 'griyagemilang.com';
+		$config['wordwrap'] = FALSE;
+		$config['mailtype'] = 'html';
+		$this->email->initialize($config);
+		
+		$message = '
+		<html><head></head><body style="font-family: Arial; margin: 0px;">
+		
+		<p>Selamat bergabung dengan Griya Gemilang!</p>
+		<p>Berikut adalah informasi untuk mengakses halaman admin:<br />
+		URL: http://griyagemilang.com/admin<br />
+		Username: '.$param['username'].'<br />
+		Password: '.$param['ori_password'].'</p>
+		<p>Silahkan login dengan informasi di atas. Terima kasih.</p>
+		
+		</body></html>
+		';
+		
+		$this->email->from('admin@griyagemilang.com', 'Griya Gemilang');
+		$this->email->to($param['email']);
+		$this->email->subject('Akses Halaman Admin Griya Gemilang');
+		$this->email->message('');
+		$send = $this->email->send();
+		
+		if ( ! $send)
+		{
+			return FALSE;
+		}
+		else
+		{
+			return TRUE;
+		}
+	}
 }
