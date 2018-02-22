@@ -58,7 +58,7 @@
                                 <select class="form-control" name="id_admin_role" id="id_admin_role">
                                     <option value="">-- Pilih Salah Satu --</option>
                                     <?php foreach ($admin_role as $row) {
-										echo '<option id="'.$row->id_admin_role.'" value="'.$row->id_admin_role.'"'.set_select('id_admin_role', $val->id_product_type).'>'.$row->name.'</option>';
+										echo '<option id="'.$row->id_admin_role.'" value="'.$row->id_admin_role.'"'.set_select('id_admin_role', $row->id_admin_role).'>'.$row->name.'</option>';
                                     } ?>
                                 </select>
                                 <?php echo form_error('id_admin_role'); ?>

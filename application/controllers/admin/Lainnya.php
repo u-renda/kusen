@@ -23,6 +23,7 @@ class Lainnya extends MY_Controller {
 			$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
 			$this->form_validation->set_message('required', '%s harus diisi');
 			$this->form_validation->set_message('min_length', '%s min 6 karakter');
+			$this->form_validation->set_rules('id_admin_role', 'tipe admin', 'required');
 			$this->form_validation->set_rules('name', 'nama', 'required');
 			$this->form_validation->set_rules('email', 'email', 'required|valid_email');
 			$this->form_validation->set_rules('username', 'username', 'required');
@@ -32,6 +33,7 @@ class Lainnya extends MY_Controller {
 			{
 				$ori_password = $this->input->post('password');
 				$param = array();
+				$param['id_admin_role'] = $this->input->post('id_admin_role');
 				$param['name'] = $this->input->post('name');
 				$param['email'] = $this->input->post('email');
 				$param['username'] = $this->input->post('username');
@@ -43,8 +45,8 @@ class Lainnya extends MY_Controller {
 				if ($query > 0)
 				{
 					// send email
-					$param['ori_password'] = $ori_password;
-					$send = $this->send_email_admin_create($param);
+					//$param['ori_password'] = $ori_password;
+					//$send = $this->send_email_admin_create($param);
 					
 					redirect($this->config->item('link_admin_lists').'?msg=success&type=create');
 				}
@@ -329,6 +331,7 @@ class Lainnya extends MY_Controller {
 					$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
 					$this->form_validation->set_message('required', '%s harus diisi');
 					$this->form_validation->set_message('min_length', '%s min 6 karakter');
+					$this->form_validation->set_rules('id_admin_role', 'id_admin_role', 'required');
 					$this->form_validation->set_rules('name', 'nama', 'required');
 					$this->form_validation->set_rules('email', 'email', 'required|valid_email');
 					$this->form_validation->set_rules('username', 'username', 'required');
@@ -341,6 +344,7 @@ class Lainnya extends MY_Controller {
 					if ($this->form_validation->run() == TRUE)
 					{
 						$param = array();
+						$param['id_admin_role'] = $this->input->post('id_admin_role');
 						$param['name'] = $this->input->post('name');
 						$param['email'] = $this->input->post('email');
 						$param['username'] = $this->input->post('username');
@@ -362,6 +366,19 @@ class Lainnya extends MY_Controller {
 							redirect($this->config->item('link_admin_lists').'?msg=error&type=edit');
 						}
 					}
+				}
+		
+				// admin role
+				$param2 = array();
+				$param2['limit'] = 10;
+				$param2['offset'] = 0;
+				$param2['order'] = 'name';
+				$param2['sort'] = 'asc';
+				$query2 = $this->admin_role_model->lists($param2);
+				
+				if ($query2->num_rows() > 0)
+				{
+					$data['admin_role'] = $query2->result();
 				}
 	
 				$data['result'] = $get->row();

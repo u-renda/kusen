@@ -52,6 +52,18 @@
                                 <?php echo form_error('password'); ?>
                             </div>
                         </div>
+						<div class="form-group">
+                            <label class="col-sm-2 control-label"><span class="text-danger">*</span> Tipe Admin:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="id_admin_role" id="id_admin_role">
+                                    <option value="">-- Pilih Salah Satu --</option>
+                                    <?php foreach ($admin_role as $row) { ?>
+										<option value="<?php echo $row->id_admin_role; ?>" <?php if ($result->id_admin_role == $row->id_admin_role) { echo 'selected="selected"'; } echo set_select('id_admin_role', $row->id_admin_role); ?>><?php echo $row->name; ?></option>
+                                    <?php } ?>
+                                </select>
+                                <?php echo form_error('id_admin_role'); ?>
+                            </div>
+                        </div>
                     </div>
                     <footer class="panel-footer">
                         <input type="submit" class="btn btn-primary" name="submit" value="Ubah" id="submit_create" />
