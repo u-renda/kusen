@@ -20,6 +20,12 @@ var adminPathname = winOrigin + "/" + winPath[1] + "/" + winPath[2] + "/";
         $('#admin').addClass('nav-active');
         $('#lainnya').addClass('nav-active nav-expanded');
     }
+	
+	// khusus admin role create & edit
+    if (winPath[3] === 'admin_role_create' || winPath[3] === 'admin_role_update') {
+        $('#admin_role').addClass('nav-active');
+        $('#lainnya').addClass('nav-active nav-expanded');
+    }
     
 	// khusus produk tipe detail
     if (winPath[3] === 'produk_tipe_detail' || winPath[3] === 'produk_tipe_detail_create') {
