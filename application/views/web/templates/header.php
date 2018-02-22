@@ -8,7 +8,11 @@
 
 		<title><?php echo $this->config->item('title'); ?></title>	
 
-		<meta name="keywords" content="Jasa Pembuatan Kusen uPVC" />
+		<meta name="keywords" content="Jasa Pembuatan Kusen uPVC, jual upvc Indonesia, jasa upvc,
+		jual upvc Jakarta, jual upvc Tangerang, jual jendela upvc, jual pintu upvc, jual upvc murah,
+		upvc Jakarta, upvc Tangerang, kusen upvc, desain upvc, jual upvc bergaransi, upvc bending,
+		desain interior upvc, jasa pasang upvc, distributor upvc, supplier upvc, aneka jendela upvc,
+		sliding upvc, pintu geser upvc" />
 		<meta name="description" content="Griya Gemilang Mandiri - Jasa Pembuatan Kusen Pintu dan Jendela uPVC">
 		<meta name="author" content="renda.innovation@gmail.com">
 

@@ -40,9 +40,11 @@ class Admin_model extends CI_Model {
             $where += array('password' => $param['password']);
         }
         
-        $this->db->select($this->table_id.', name, email, username, password, created_date,
-						  updated_date');
+        $this->db->select($this->table_id.', '.$this->table.'.name, email, username, password,
+						  '.$this->table.'.created_date, '.$this->table.'.updated_date,
+						  '.$this->table.'.id_admin_role, admin_role.name AS role_name');
         $this->db->from($this->table);
+        $this->db->join('admin_role', $this->table.'.id_admin_role = admin_role.id_admin_role');
         $this->db->where($where);
         $query = $this->db->get();
         return $query;

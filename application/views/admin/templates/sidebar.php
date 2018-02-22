@@ -78,11 +78,13 @@
                                      Pengaturan
                                 </a>
                             </li>
+							<?php if ($this->session->userdata('role_name') == 'Administrator') { ?>
                             <li class="list-child" id="admin">
                                 <a href="<?php echo $this->config->item('link_admin_lists'); ?>">
                                      Daftar Admin
                                 </a>
                             </li>
+							<?php } ?>
                         </ul>
                     </li>
                 </ul>

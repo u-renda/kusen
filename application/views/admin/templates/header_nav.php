@@ -19,6 +19,7 @@
                     <a href="#" data-toggle="dropdown">
                         <div class="profile-info" data-lock-nama="<?php echo $this->session->userdata('name'); ?>" data-lock-email="<?php echo $this->session->userdata('email'); ?>">
                             <span class="name"><?php echo $this->session->userdata('name'); ?></span>
+                            <span class="role"><?php echo $this->session->userdata('role_name'); ?></span>
                         </div>
         
                         <i class="fa custom-caret"></i>

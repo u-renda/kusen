@@ -53,7 +53,9 @@ class Login extends MY_Controller {
 						'username'=> $admin->username,
 						'email'=> $admin->email,
 						'name'=> $admin->name,
-						'is_login' => TRUE
+						'is_login' => TRUE,
+						'role_name' => $admin->role_name,
+						'id_admin_role' => $admin->id_admin_role
 					);
 					
 					// Set session
@@ -75,6 +77,8 @@ class Login extends MY_Controller {
 		$this->session->unset_userdata('name');
 		$this->session->unset_userdata('email');
 		$this->session->unset_userdata('is_login');
+		$this->session->unset_userdata('role_name');
+		$this->session->unset_userdata('id_admin_role');
 		
         redirect($this->config->item('link_admin_login'));
     }
