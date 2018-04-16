@@ -5,10 +5,6 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1>Tentang Kami</h1>
-					<ul class="breadcrumb">
-						<li><a href="<?php echo base_url(); ?>">Beranda</a></li>
-						<li class="active">Tentang Kami</li>
-					</ul>
 				</div>
 			</div>
 		</div>

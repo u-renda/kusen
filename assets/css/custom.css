@@ -23,3 +23,32 @@ html #header .header-top.header-top-third {
 	max-height: 358px;
 	width: 100%;
 }
+
+.kantor-kami-icon {
+	background-color: #0088cc;
+	color: #FFF;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding: 5px;
+	border-color: #0088cc;
+    left: 0;
+    top: 5px;
+}
+.kantor-kami-title {
+	padding-left: 11px;
+}
+
+.pt-35 {
+	padding-top: 35px;
+}
+.valign-text-top {
+	vertical-align: text-top;
+}
+.h-40 {
+	height: 40px;
+}
+.h-50 {
+	height: 50px;
+}

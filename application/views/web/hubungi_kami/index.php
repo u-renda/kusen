@@ -5,10 +5,6 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1>Hubungi Kami</h1>
-					<ul class="breadcrumb">
-						<li><a href="<?php echo base_url(); ?>">Beranda</a></li>
-						<li class="active">Hubungi Kami</li>
-					</ul>
 				</div>
 			</div>
 		</div>
@@ -65,19 +61,31 @@
 			<div class="col-md-6">
 
 				<h4 class="heading-primary">Kantor <strong>Kami</strong></h4>
-				<ul class="list list-icons list-icons-style-3 mt-xlg">
-					<li><i class="fa fa-map-marker"></i> <strong>Alamat:</strong> <?php echo $alamat;?></li>
-					<li><i class="fa fa-phone"></i> <strong>Telp:</strong> <?php echo $telp; ?></li>
-					<li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></li>
-					<li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:<?php echo $email2; ?>"><?php echo $email2; ?></a></li>
-				</ul>
+				<table>
+					<tr class="h-50">
+						<td class="valign-text-top"><i class="fa fa-map-marker kantor-kami-icon"></i><strong class="kantor-kami-title">Alamat:&nbsp;</strong></td>
+						<td class="valign-text-top"><?php echo $alamat;?></td>
+					</tr>
+					<tr class="h-40">
+						<td><i class="fa fa-phone kantor-kami-icon"></i><strong class="kantor-kami-title">Telp:&nbsp;</strong></td>
+						<td><?php echo $telp; ?></td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-envelope kantor-kami-icon"></i><strong class="kantor-kami-title">Email:&nbsp;</strong></td>
+						<td><a href="mailto:<?php echo $email2; ?>"><?php echo $email2; ?></a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></td>
+					</tr>
+				</table>
 
 				<hr class="tall">
 
 				<h4 class="heading-primary">Jam <strong>Kerja</strong></h4>
 				<ul class="list list-icons list-dark mt-xlg">
-					<li><i class="fa fa-clock-o"></i> Senin - Jumat 08:00 WIB sampai 17:00 WIB</li>
-					<li><i class="fa fa-clock-o"></i> Sabtu & Minggu - Tutup</li>
+					<li><i class="fa fa-clock-o"></i> Senin - Jumat &nbsp | 08:00 - 17:00 WIB</li>
+					<li><i class="fa fa-clock-o"></i> Sabtu - Minggu | Tutup</li>
 				</ul>
 			</div>
 		</div>
