@@ -66,9 +66,9 @@
 						<td class="valign-text-top"><i class="fa fa-map-marker kantor-kami-icon"></i><strong class="kantor-kami-title">Alamat:&nbsp;</strong></td>
 						<td class="valign-text-top"><?php echo $alamat;?></td>
 					</tr>
-					<tr class="h-40">
-						<td><i class="fa fa-phone kantor-kami-icon"></i><strong class="kantor-kami-title">Telp:&nbsp;</strong></td>
-						<td><?php echo $telp; ?></td>
+					<tr class="h-50">
+						<td class="valign-text-top"><i class="fa fa-phone kantor-kami-icon"></i><strong class="kantor-kami-title">Telp:&nbsp;</strong></td>
+						<td class="valign-text-top"><?php echo $telp; ?></td>
 					</tr>
 					<tr>
 						<td><i class="fa fa-envelope kantor-kami-icon"></i><strong class="kantor-kami-title">Email:&nbsp;</strong></td>
