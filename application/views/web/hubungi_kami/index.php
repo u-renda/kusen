@@ -66,7 +66,7 @@
 						<td class="valign-text-top"><i class="fa fa-map-marker kantor-kami-icon"></i><strong class="kantor-kami-title">Alamat:&nbsp;</strong></td>
 						<td class="valign-text-top"><?php echo $alamat;?></td>
 					</tr>
-					<tr class="h-50">
+					<tr class="h-30">
 						<td class="valign-text-top"><i class="fa fa-phone kantor-kami-icon"></i><strong class="kantor-kami-title">Telp:&nbsp;</strong></td>
 						<td class="valign-text-top"><?php echo $telp; ?></td>
 					</tr>

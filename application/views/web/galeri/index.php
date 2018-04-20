@@ -5,10 +5,6 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1>Galeri</h1>
-					<ul class="breadcrumb">
-						<li><a href="<?php echo base_url(); ?>">Beranda</a></li>
-						<li class="active">Galeri</li>
-					</ul>
 				</div>
 			</div>
 		</div>

@@ -5,12 +5,6 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h1><?php echo strtoupper($product_type_detail->name); ?></h1>
-					<ul class="breadcrumb">
-						<li><a href="<?php echo base_url(); ?>">Beranda</a></li>
-						<li>Produk</li>
-						<li><?php echo strtoupper($product_type_detail->product_type_name); ?></li>
-						<li class="active"><?php echo strtoupper($product_type_detail->name); ?></li>
-					</ul>
 				</div>
 			</div>
 		</div>

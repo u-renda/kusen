@@ -4,12 +4,24 @@
 						<div class="col-md-4">
 							<div class="contact-details">
 								<h4>Hubungi Kami</h4>
-								<ul class="contact">
-									<li><p><i class="fa fa-map-marker"></i> <strong>Alamat:</strong> <?php echo $alamat; ?></p></li>
-									<li><p><i class="fa fa-phone"></i> <strong>Telp:</strong> <?php echo $telp; ?></p></li>
-									<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p></li>
-									<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:<?php echo $email2; ?>"><?php echo $email2; ?></a></p></li>
-								</ul>
+								<table>
+									<tr class="h-50">
+										<td class="valign-text-top"><i class="fa fa-map-marker kantor-kami-icon"></i><strong class="kantor-kami-title">Alamat:&nbsp;</strong></td>
+										<td class="valign-text-top"><?php echo $alamat;?></td>
+									</tr>
+									<tr class="h-30">
+										<td class="valign-text-top"><i class="fa fa-phone kantor-kami-icon"></i><strong class="kantor-kami-title">Telp:&nbsp;</strong></td>
+										<td class="valign-text-top"><?php echo $telp; ?></td>
+									</tr>
+									<tr>
+										<td><i class="fa fa-envelope kantor-kami-icon"></i><strong class="kantor-kami-title">Email:&nbsp;</strong></td>
+										<td><a href="mailto:<?php echo $email2; ?>"><?php echo $email2; ?></a></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></td>
+									</tr>
+								</table>
 							</div>
 						</div>
 						<div class="col-md-2">
